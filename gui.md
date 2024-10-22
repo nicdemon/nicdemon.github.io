@@ -1,0 +1,27 @@
+---
+layout: page
+title: Desktop apps
+permalink: /gui
+---
+<!-- Posts preprocessing -->
+{% assign ordered_posts = site.posts | sort: 'date' | reverse %}
+{% assign GUI = ordered_posts | where: "category", "gui" %}
+
+{% include category.html content = GUI %}
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>

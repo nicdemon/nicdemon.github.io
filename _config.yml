@@ -15,33 +15,41 @@
 # in the templates via {{ site.myvariable }}.
 title: Nicolas de Montigny
 email: nicolas.de.montigny0323@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is my personnal website for showcasing my portfolio and projects.
+description: Website for showcasing my projects portfolio.
 domain: "nicdemon.github.io"
 url: "https://nicdemon.github.io/"
 baseurl: ""
-github_username:  nicdemon
+# github_username: nicdemon
+# linkedin_username: nicolas-de-montigny-8755101b0
 
 # Build settings
 markdown: kramdown
-theme: minimal
-remote_theme: pages-themes/minimal@v0.2.0
-# theme: minima
-# theme: bulma-clean-theme
+theme: minima
 # With GitHub Pages Gem
-# remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+
+# Custom build settings
+minima:
+  social_links:
+    - { platform: github,  user_url: "https://github.com/nicdemon", title: "Github" }
+    - { platform: linkedin, user_url: "https://linkedin.com/in/nicolas-de-montigny-8755101b0", title: "LinkedIn" }
+    - { platform: researchgate, user_url: "https://www.researchgate.net/profile/Nicolas-De-Montigny", title: "ResearchGate" }
+    - { platform: orcid, user_url: "https://orcid.org/0000-0002-3708-4055", title: "OrcID" }
+header_pages:
+  - genomics.md
+  - web.md
+  - gui.md
+  - certifications.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

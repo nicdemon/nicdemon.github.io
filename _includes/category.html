@@ -1,0 +1,54 @@
+<html>
+{% for post in include.content %}
+    <button class="collapsible">
+        <h6><b>{{ post.location }}</b> - {{ post.title }}</h6>
+    </button>
+    <div class="content">
+        <img class="drop-img" src="{{ post.image }}">
+        <p style="padding-top: 15px;"><u>Project description:</u> {{ post.description }}</p>
+        {% if post.contributors %}
+        {% assign contributors = post.contributors | split: ", "%}
+            <p>
+                <u>Other contributors to the project:</u>
+                <ul>
+                    {% for contributor in contributors %}
+                    <li>{{ contributor }}</li>
+                    {% endfor %}
+                </ul>
+            </p>
+        {% endif %}
+        {% assign tasks = post.tasks | split: ", "%}
+        <p>
+            <u>Responsibilities:</u>
+            <ul>
+                {% for task in tasks %}
+                    <li>{{ task }}</li>
+                {% endfor %}
+            </ul>
+        </p>
+        {% assign tools = post.tools | split: ", " %}
+        <p>
+            <u>Tools & packages used:</u>
+            <ul>
+                {% for tool in tools %}
+                <li>{{ tool }}</li>
+                {% endfor %}
+            </ul>
+        </p>
+        <div class="collapsible-grid">
+            {% if post.article %}
+                <a href="{{ post.article }}" target="_blank">
+                    <img src="/assets/img/article.png" height=25px>
+                    Article
+                </a>
+            {% endif %}
+            {% if post.github %}
+                <a href="{{ post.github }}" target="_blank">
+                    <img src="/assets/img/github.png" height=25px>
+                    Code repo
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+</html>
