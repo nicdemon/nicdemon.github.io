@@ -2,6 +2,6 @@
 layout: post
 title: # Title of the project
 category: badges
-tag: # sub-category: GCP, AWS, CCDB, etc.
+tags: # sub-category: GCP, AWS, CCDB, etc. + certification / badge if applicable
 iframe: # the embed code for the badge on credly or other service
 ---

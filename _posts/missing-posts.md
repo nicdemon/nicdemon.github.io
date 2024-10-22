@@ -1,5 +1,6 @@
 # Genomics
-* [ ] MS - Caribou
+
+* [x] MS - Caribou
 * [ ] DESS - Metagenome (BIF7104 & BIF7101)
 
 # Web

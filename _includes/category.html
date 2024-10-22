@@ -4,8 +4,14 @@
         <h6><b>{{ post.location }}</b> - {{ post.title }}</h6>
     </button>
     <div class="content">
-        <img class="drop-img" src="{{ post.image }}">
-        <p style="padding-top: 15px;"><u>Project description:</u> {{ post.description }}</p>
+        <img id="dropImg" class="drop-img" src="{{ post.image }}">
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img-modal">
+            <div id="caption"></div>
+        </div>
+        <p style="padding-top: 15px;"><u>Project description:</u></p>
+        <p>{{ post.description }}</p>
         {% if post.contributors %}
         {% assign contributors = post.contributors | split: ", "%}
             <p>
@@ -52,3 +58,25 @@
     </div>
 {% endfor %}
 </html>
+
+<script>
+    var modal = document.getElementById("imgModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("dropImg");
+    var modalImg = document.getElementById("img-modal");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+</script>

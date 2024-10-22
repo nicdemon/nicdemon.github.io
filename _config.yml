@@ -38,8 +38,8 @@ minima:
     - { platform: orcid, user_url: "https://orcid.org/0000-0002-3708-4055", title: "OrcID" }
 header_pages:
   - genomics.md
-  - web.md
-  - gui.md
+  # - web.md
+  # - gui.md
   - certifications.md
 
 # Exclude from processing.
