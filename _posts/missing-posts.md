@@ -1,20 +1,20 @@
 # Genomics
 
 * [x] MS - Caribou
-* [ ] DESS - Metagenome (BIF7104 & BIF7101)
+* [x] DESS - Metagenome (BIF7104 & BIF7101)
 
 # Web
-* [ ] DESS - PhyML (INF8214)
-* [ ] Falcone - RShiny app
-* [ ] UQAM - diallolab.com
-* [ ] UQAM - well-e.org
-    * [ ] Programaction extension
-    * [ ] Wordpress revamping
-* [ ] UQAM - LLaMARJO + db
+* [x] DESS - PhyML (INF8214)
+* [x] Falcone - RShiny app
+* [x] UQAM - diallolab.com
+* [x] UQAM - well-e.org
+    * [x] Programaction extension
+    * [x] Wordpress revamping
 
 # GUI
-* [ ] UQAM - Narval upload (pysimplegui)
-* [ ] UQAM - Joyceville preprocessing form (flet)
+* [x] UQAM - Joyceville preprocessing form (flet)
+* [x] UQAM - LLaMARJO + db
+* [x] UQAM - Narval upload (pysimplegui)
 
 # CLI {Not sure if pertinent}
 * [ ] MS - Caribou

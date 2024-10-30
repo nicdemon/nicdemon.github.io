@@ -54,6 +54,12 @@
                     Code repo
                 </a>
             {% endif %}
+            {% if post.website %}
+                <a href="{{ post.website }}" target="_blank">
+                    <img src="/assets/img/website.png" height=25px>
+                    Website
+                </a>
+            {% endif %}
         </div>
     </div>
 {% endfor %}

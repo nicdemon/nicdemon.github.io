@@ -11,4 +11,5 @@ contributors: # Other team members
 *tools: # Tools used for the project
 article: # Link to article if available
 github: # Link to github repo if available
+website: # Link to online resource depending on the category of post
 ---
