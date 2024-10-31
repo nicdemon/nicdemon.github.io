@@ -2,8 +2,8 @@
 <div class="grid-container">
 {% for post in include.content %}
     <div class="card">
-        <h5><b>{{ post.location }}</b></h5>
-        <h6>{{ post.title }}</h6>
+        <h5><b>{{ post.title }}</b></h5>
+        <h6>{{ post.location }}</h6>
         <img src="{{ post.image }}" style="padding-bottom: 5%">
         <p><button class="button">More informations</button></p>
     </div>
@@ -11,7 +11,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h6 style="text-align: center;"><b>{{ post.location }}</b> - {{ post.title }}</h6>
+                <h6 style="text-align: center;"><b>{{ post.title }}</b> - {{ post.location }}</h6>
             </div>
             <div class="modal-body">
                 <div class="modal-body-grid">
