@@ -10,18 +10,22 @@ permalink: /gui
 {% include category.html content = GUI %}
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    /* Modal reactivity */
+    
+    // Get elements in variables
+    var btn = document.getElementsByClassName("button");
+    var modals = document.getElementsByClassName("modal");
+    var spans = document.getElementsByClassName("close");
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+    // For loop to make buttons reactive
+    for (let i in btn){
+        // Open modal on button click
+        btn[i].onclick = function(){
+          modals[i].style.display = "block";
+        }
+        // Close modal on click (x)
+        spans[i].onclick = function(){
+          modals[i].style.display = "none";
+        }
     }
-  });
-}
 </script>

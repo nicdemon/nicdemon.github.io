@@ -17,18 +17,22 @@ Transcriptomics aim to analyse the expression of genes in a given sample taken f
 {% include category.html content = transcriptomics %}
 
 <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+    /* Modal reactivity */
     
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+    // Get elements in variables
+    const btn = document.getElementsByClassName("button");
+    const modals = document.getElementsByClassName("modal");
+    const spans = document.getElementsByClassName("close");
+
+    // For loop to make buttons reactive
+    for (let i in btn){
+        // Open modal on button click
+        btn[i].onclick = function(){
+          modals[i].style.display = "block";
         }
-      });
+        // Close modal on click (x)
+        spans[i].onclick = function(){
+          modals[i].style.display = "none";
+        }
     }
 </script>
