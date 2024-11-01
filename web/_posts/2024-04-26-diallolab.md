@@ -1,6 +1,6 @@
 ---
 layout: post
-location: UQAM
+location: DialloLab at UQAM
 title: DialloLab website
 image: 
 category: web

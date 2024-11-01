@@ -1,6 +1,6 @@
 ---
 layout: post
-location: Falcone lab at IRCM
+location: Falcone Lab at IRCM
 title: RShiny app for data visualization of REAP results
 image: /assets/img/REAP-demo-web.png
 category: web
