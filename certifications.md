@@ -7,24 +7,37 @@ permalink: /certifications
 {% assign ordered_posts = site.posts | sort: 'date' %}
 <!-- Google Cloud Platform -->
 {% assign GCP = ordered_posts | where: "category", "badges" | where: "tags", "GCP" %}
-{% assign GCP_badges = GCP | where: "tags", "badge" %}
+{% assign GCP_skills = GCP | where: "tags", "skill" %}
 {% assign GCP_certifications = GCP | where: "tags", "certification" %}
 <!-- Microsoft learn -->
 {% assign microsoft = ordered_posts | where: "category", "badges" | where: "tags", "microsoft" %}
-{% assign microsoft_trophies = microsoft | where: "tags", "trophy" %}
+{% assign microsoft_course = microsoft | where: "tags", "course" %}
+{% assign microsoft_lp = microsoft | where: "tags", "learning-path" %}
+<!-- AWS -->
 <!-- Digital Research Alliance of Canada -->
 {% assign CCDB = ordered_posts | where: "category", "badges" | where: "tags", "CCDB" %}
 
 ## Google Cloud Platform
-The learning paths certifications are obtained when completing all courses from a learning path on [Google Cloud Skill Boost](https://www.cloudskillsboost.google/paths) while the course badges are obtained when completing all tasks from a challenge applied course where previously learned concepts are used to complete the scenario.
-### Learning paths
-{% include badges-embed.html content = GCP_certifications %}
-### Course badges
-{% include badges-embed.html content = GCP_badges %}
+<!-- Learning paths -> Skill badges -> Completion badge -->
+Training done on [Google Cloud Skill Boost](https://www.cloudskillsboost.google/paths).
 
-## Microsoft Learning
-The learning paths trophies are obtained when completing all courses from a learning path on [Microsoft Learn](https://learn.microsoft.com/en-us/).
-{% include certificates.html content = microsoft_trophies %}
+Certifications are obtained when completing specific learning paths while the skill badges are obtained when completing challenge courses where previously learned concepts are used to complete the scenario. On this platform, course completion badges also exist for when a hands-on course is completed but are not shown here as they are required to get certifications.
+### Certifications
+{% include badges-embed.html content = GCP_certifications %}
+### Skill badges
+{% include badges-embed.html content = GCP_skills %}
+
+## Microsoft Learn
+<!-- Course -> Learning paths -> Modules -->
+Training done on [Microsoft Learn](https://learn.microsoft.com/en-us/).
+
+<!-- Certifications are awarded when a course is fully completed and the exam is passed successfully. -->
+The learning path trophies are obtained when completing all modules from a learning path. On this platform, badges are obtained when completing a learning module but they are not shown here as they are required to get learning path trophies.
+<!-- ### Certifications -->
+<!-- ### Learning path trophies -->
+{% include certificates.html content = microsoft_lp %}
+
+<!-- ## Amazon Web Services -->
 
 ## Digital Research Alliance of Canada
 These certifications were acquired by following courses hosted by the different instances of the [Digital Research Alliance of Canada](https://www.alliancecan.ca/en).
