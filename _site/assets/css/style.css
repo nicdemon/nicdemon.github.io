@@ -229,7 +229,7 @@ table td { border: 1px solid #e8e8e8; }
 * { box-sizing: border-box; }
 
 /* Grid 3 column grid */
-.grid-container { display: grid; grid-template-columns: 30% 30% 30%; justify-content: space-evenly; gap: 20px; }
+.grid-container { display: grid; grid-template-columns: 25% 25% 25% 25%; justify-content: space-evenly; gap: 20px; }
 
 /* Style the counter cards */
 .card { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */ padding: 15px; text-align: center; background-color: #f1f1f1; position: relative; }

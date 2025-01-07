@@ -9,10 +9,10 @@
   box-sizing: border-box;
 }
 
-/* Grid 3 column grid */
+/* Grid 4 column grid */
 .grid-container {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 25% 25% 25% 25%;
   justify-content: space-evenly;
   gap: 20px;
 }

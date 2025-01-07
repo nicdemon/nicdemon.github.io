@@ -28,13 +28,14 @@ Certifications are obtained when completing specific learning paths while the sk
 {% include badges-embed.html content = GCP_skills %}
 
 ## Microsoft Learn
-<!-- Course -> Learning paths -> Modules -->
+<!-- Examen -> Course -> Learning paths -> Modules -->
 Training done on [Microsoft Learn](https://learn.microsoft.com/en-us/).
 
-<!-- Certifications are awarded when a course is fully completed and the exam is passed successfully. -->
+Certifications are awarded when a course is fully completed and the exam is passed successfully. Courses are collections of learning paths aimed to prepare for a certification exam.
 The learning path trophies are obtained when completing all modules from a learning path. On this platform, badges are obtained when completing a learning module but they are not shown here as they are required to get learning path trophies.
-<!-- ### Certifications -->
-<!-- ### Learning path trophies -->
+### Courses
+{% include certificates.html content = microsoft_course %}
+### Learning path trophies
 {% include certificates.html content = microsoft_lp %}
 
 <!-- ## Amazon Web Services -->
