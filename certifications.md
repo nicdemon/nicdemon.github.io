@@ -14,6 +14,8 @@ permalink: /certifications
 {% assign microsoft_course = microsoft | where: "tags", "course" %}
 {% assign microsoft_lp = microsoft | where: "tags", "learning-path" %}
 <!-- AWS -->
+<!-- Kaggle -->
+{% assign kaggle = ordered_posts | where: "category", "badges" | where: "tags", "kaggle" %}
 <!-- Digital Research Alliance of Canada -->
 {% assign CCDB = ordered_posts | where: "category", "badges" | where: "tags", "CCDB" %}
 
@@ -39,6 +41,12 @@ The learning path trophies are obtained when completing all modules from a learn
 {% include certificates.html content = microsoft_lp %}
 
 <!-- ## Amazon Web Services -->
+
+## Kaggle
+Training done on [Kaggle Learn](https://www.kaggle.com/learn).
+
+Certificates are awarded when both theoritical and applied parts of a course have been completed
+{% include certificates.html content = kaggle %}
 
 ## Digital Research Alliance of Canada
 These certifications were acquired by following courses hosted by the different instances of the [Digital Research Alliance of Canada](https://www.alliancecan.ca/en).

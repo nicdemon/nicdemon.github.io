@@ -228,7 +228,7 @@ table td { border: 1px solid #e8e8e8; }
 @media screen and (min-width: 800px) { .one-half { width: calc(50% - (30px / 2)); } }
 * { box-sizing: border-box; }
 
-/* Grid 3 column grid */
+/* Grid 4 column grid */
 .grid-container { display: grid; grid-template-columns: 25% 25% 25% 25%; justify-content: space-evenly; gap: 20px; }
 
 /* Style the counter cards */
