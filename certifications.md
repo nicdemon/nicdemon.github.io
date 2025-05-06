@@ -18,6 +18,8 @@ permalink: /certifications
 {% assign kaggle = ordered_posts | where: "category", "badges" | where: "tags", "kaggle" %}
 <!-- Digital Research Alliance of Canada -->
 {% assign CCDB = ordered_posts | where: "category", "badges" | where: "tags", "CCDB" %}
+<!-- AFI U -->
+{% assign AFI-U = ordered_posts | where: "category", "badges" | where: "tags", "AFI-U" %}
 
 ## Google Cloud Platform
 <!-- Learning paths -> Skill badges -> Completion badge -->
@@ -53,3 +55,7 @@ These certifications were acquired by following courses hosted by the different 
 {% include certificates.html content = CCDB %}
 
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+## AFI-U
+These certifications were acquired by following courses given by [AFI U.](https://www.afiexpertise.com/).
+{% include certificates.html content = AFI-U %}
