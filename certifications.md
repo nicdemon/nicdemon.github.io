@@ -57,5 +57,5 @@ These certifications were acquired by following courses hosted by the different 
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 ## AFI-U
-These certifications were acquired by following courses given by [AFI U.](https://www.afiexpertise.com/).
+These certifications were acquired by following courses given by [AFI U](https://www.afiexpertise.com/).
 {% include certificates.html content = AFI-U %}

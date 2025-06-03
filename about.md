@@ -24,3 +24,17 @@ Being in-between biology and computer sciences makes me able to understand both 
 * Human genomics
 * Metagenomics
 * One Health principle
+
+
+<!--
+Revamping ideas
+Sphinx on github pages
+* https://github.com/sphinx-doc/sphinx
+* https://www.sphinx-doc.org/en/master/
+* https://coderefinery.github.io/documentation/gh_workflow/
+* https://www.sphinx-doc.org/en/master/tutorial/deploying.html
+* https://github.com/marketplace/actions/sphinx-to-github-pages
+* https://olgarithms.github.io/sphinx-tutorial/docs/7-hosting-on-github-pages.html
+Flet static webapp
+* 
+-->
