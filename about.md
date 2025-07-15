@@ -36,5 +36,8 @@ Sphinx on github pages
 * https://github.com/marketplace/actions/sphinx-to-github-pages
 * https://olgarithms.github.io/sphinx-tutorial/docs/7-hosting-on-github-pages.html
 Flet static webapp
-* 
+* Build with Flet
+* Github action for deploying to pages
+GitBook
+* Hosting on the GitBook platform
 -->
