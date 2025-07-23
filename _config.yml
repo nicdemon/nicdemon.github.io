@@ -1,58 +1,45 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Nicolas de Montigny
 email: nicolas.de.montigny0323@gmail.com
-description: Website for showcasing my projects portfolio.
+description: Personnal website for showcasing my projects portfolio & certifications.
 domain: "nicdemon.github.io"
 url: "https://nicdemon.github.io/"
-baseurl: ""
+baseurl: "/"
 # github_username: nicdemon
 # linkedin_username: nicolas-de-montigny-8755101b0
 
-# Build settings
-markdown: kramdown
-theme: minima
-# With GitHub Pages Gem
+permalink: /:slug
+
+favicon: "./favicon.ico" # relative path to site's favicon
+
+#theme: moonwalk # if you are using GitHub Pages, change it to remote_theme: abhinavs/moonwalk
+remote_theme: abhinavs/moonwalk
+
+theme_config:
+  appearance: "auto" # can be "light", "dark" or "auto"
+  appearance_toggle: true # if appearance can be switched by user
+  back_home_text: "Back" # customize text for homepage link in post layout
+  date_format: "%d-%m-%y" # customize how date is formatted
+  show_description: true # show blog description
+  show_navbar: true # show horizontal navbar
+  show_footer: true # show footer links in home page,add in _data/home.yml
+  show_copyright: true # show copyright notice in footer
+  # following keys are used to create home layout
+  show_projects: true # show projects as cards, add in _data/home.yml
+  show_blog: false # show blog posts added in _posts
+  show_old_projects: true # show old projects as cards, add in _data/home.yml
+  show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
+  show_reading_time: false # show number of words and reading time in the blog posts
+  show_tags: true # show tags in a blog posts
+  # options for "home" page
+
+highlighter: rouge
+
+sass:
+  style: :compressed
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
-# Custom build settings
-minima:
-  social_links:
-    - { platform: github,  user_url: "https://github.com/nicdemon", title: "Github" }
-    - { platform: linkedin, user_url: "https://linkedin.com/in/nicolas-de-montigny-8755101b0", title: "LinkedIn" }
-    - { platform: researchgate, user_url: "https://www.researchgate.net/profile/Nicolas-De-Montigny", title: "ResearchGate" }
-    - { platform: orcid, user_url: "https://orcid.org/0000-0002-3708-4055", title: "OrcID" }
-header_pages:
-  - genomics.md
-  - web.md
-  - gui.md
-  - certifications.md
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-# Google Analytics
-google_analytics: G-GR9828KWWV
+  - minima/
