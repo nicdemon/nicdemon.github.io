@@ -1,8 +1,8 @@
 ---
 layout: post
 location: Héma-Québec
-title: 
-image: /assets/img/secure-supplier.png
+title: PowerApp for team process analysis
+image: /assets/img/process-analysis.png
 category: web
 tag: 
 description: Model-driven app, used to input, modify, and analyse data relative to a team process. Analysis is then used for improvement of the processes.
