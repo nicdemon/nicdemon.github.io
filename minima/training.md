@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Certifications
-permalink: /certifications
+title: Training
+permalink: /training
 ---
 <!-- Posts preprocessing -->
 {% assign ordered_posts = site.posts | sort: 'date' %}

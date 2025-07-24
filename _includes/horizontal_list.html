@@ -1,5 +1,10 @@
 <ul class="horizontal-list">
   {% for item in include.collection %}
+  <li>
+    <a href="{{ item.url }}">
+      <img src="{{ item.icon }}" alt="" style="width: 32px; height: 32px;">
+    </a>
+  </li>
     <li>
       <a href="{{ item.url }}">
         {{ item.title }}

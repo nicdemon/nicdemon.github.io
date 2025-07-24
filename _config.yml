@@ -3,7 +3,7 @@ email: nicolas.de.montigny0323@gmail.com
 description: Personnal website for showcasing my projects portfolio & certifications.
 domain: "nicdemon.github.io"
 url: "https://nicdemon.github.io/"
-baseurl: "/"
+baseurl: ""
 # github_username: nicdemon
 # linkedin_username: nicolas-de-montigny-8755101b0
 
@@ -19,18 +19,10 @@ theme_config:
   appearance_toggle: true # if appearance can be switched by user
   back_home_text: "Back" # customize text for homepage link in post layout
   date_format: "%d-%m-%y" # customize how date is formatted
-  show_description: true # show blog description
+  show_description: false # show blog description
   show_navbar: true # show horizontal navbar
   show_footer: true # show footer links in home page,add in _data/home.yml
   show_copyright: true # show copyright notice in footer
-  # following keys are used to create home layout
-  show_projects: true # show projects as cards, add in _data/home.yml
-  show_blog: false # show blog posts added in _posts
-  show_old_projects: true # show old projects as cards, add in _data/home.yml
-  show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
-  show_reading_time: false # show number of words and reading time in the blog posts
-  show_tags: true # show tags in a blog posts
-  # options for "home" page
 
 highlighter: rouge
 

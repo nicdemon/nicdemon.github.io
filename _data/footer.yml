@@ -1,0 +1,16 @@
+footer:
+  - title: LinkedIn
+    icon: /assets/images/icons/linkedin.ico
+    url: https://linkedin.com/in/nicolas-de-montigny-8755101b0
+
+  - title: Github
+    icon: /assets/images/icons/github.ico
+    url: https://github.com/nicdemon
+
+  - title: ResearchGate
+    icon: /assets/images/icons/researchgate.ico
+    url: https://www.researchgate.net/profile/Nicolas-De-Montigny
+
+  - title: OrcID
+    icon: /assets/images/icons/orcid.ico
+    url: https://orcid.org/0000-0002-3708-4055

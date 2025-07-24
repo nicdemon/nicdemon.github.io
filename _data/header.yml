@@ -1,0 +1,16 @@
+navigation:
+  - title: About
+    icon: /assets/images/icons/about.ico
+    url: /
+
+  - title: Genomics
+    icon: /assets/images/icons/bioinformatics.ico
+    url: genomics
+
+  - title: Interfaces
+    icon: /assets/images/icons/interfaces.ico
+    url: interfaces
+
+  - title: Training
+    icon: /assets/images/icons/training.ico
+    url: training
