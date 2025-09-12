@@ -1,0 +1,41 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: "Portfolio"
+  authors:
+    - name: Nicolas de Montigny
+      website: https://nicdemon.github.io/
+      id: nicdemon
+      orcid: 
+      github: nicdemon
+      affiliations:
+        - name: Héma-Québec
+          url: https://www.hemaquebec.ca/
+  # description:
+  # keywords: []
+  # authors: [Nicolas de Montigny]
+  github: https://github.com/nicdemon
+  toc:
+    # - file: index.md
+    - file: genomics.md
+    - file: interfaces.md
+    - file: training.md
+    - file: cv-info.md    
+site:
+  template: book-theme
+  options:
+    folders: true
+    logo_text: Nicolas de Montingy
+    analytics_google: G-GR9828KWWV # Measurement ID or Tracking ID
+    favicon: /img/favicon.ico
+  domains:
+    - nicdemon.github.io
+  nav:
+    - title: Genomics
+      url: /genomics
+    - title: Interfaces
+      url: /interfaces
+    - title: Training
+      url: /training
+    - title: Curriculum Vitae
+      url: /cv-info
