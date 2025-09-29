@@ -6,31 +6,37 @@ project:
     - name: Nicolas de Montigny
       website: https://nicdemon.github.io/
       id: nicdemon
-      orcid: 
+      orcid: 0000-0002-3708-4055
       github: nicdemon
       affiliations:
         - name: Héma-Québec
           url: https://www.hemaquebec.ca/
   # description:
   # keywords: []
-  # authors: [Nicolas de Montigny]
   github: https://github.com/nicdemon
   toc:
-    # - file: index.md
+    - file: index.md
     - file: genomics.md
     - file: interfaces.md
     - file: training.md
-    - file: cv-info.md    
+    - file: cv-info.md
+  plugins:
+    - type: executable
+      path: src/blogpost-myst.py
+    - src/socialpost.mjs
 site:
   template: book-theme
   options:
     folders: true
+    hide_toc: true
     logo_text: Nicolas de Montingy
     analytics_google: G-GR9828KWWV # Measurement ID or Tracking ID
     favicon: /img/favicon.ico
   domains:
     - nicdemon.github.io
   nav:
+    - title: About
+      url: /index
     - title: Genomics
       url: /genomics
     - title: Interfaces

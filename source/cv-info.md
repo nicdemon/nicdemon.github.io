@@ -1,6 +1,7 @@
-:sd_hide_title:
-Curriculum vitae
-=======================
+---
+title: Curriculum vitae
+---
+# Curriculum vitae
 
 CV page
 

@@ -168,3 +168,5 @@ src/supplement/__pycache__/
 src/Caribou.egg-info/
 
 *:Zone.Identifier
+# MyST build outputs
+_build

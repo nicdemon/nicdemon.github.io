@@ -21,7 +21,3 @@
 .. :image: 
 .. :external_link: 
 .. :nocomments:
-
-Template post
-=============
-

@@ -1,6 +1,7 @@
-:sd_hide_title:
-Interfaces
-=======================
+---
+title: Interfaces
+---
+# Interfaces
 
 Interface page
 

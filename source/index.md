@@ -1,7 +1,14 @@
 ---
-site:
-   hide_toc: true
+title: About
 ---
+
+```{toctree}
+:hidden:
+genomics.md
+interfaces.md
+training.md
+cv-info.md
+```
 
 # Hi, I'm Nicolas de Montigny
 
@@ -55,6 +62,7 @@ Being both a computer scientist and a biologist enables me to understand both wo
 
 ![Computer icons created by vectorsmarket15 - Flaticon](/img/compsci.ico "ComputerScience") **Computer sciences**
 
+* Data Science
 * Machine Learning
 * Cloud Computing
 * Tool development for biological data analysis
@@ -68,7 +76,7 @@ Being both a computer scientist and a biologist enables me to understand both wo
 * Environment & Climate changes
 * Human genomics
 * Metagenomics
-* One Health principle
+* One Health paradigm
 
 ::::
 

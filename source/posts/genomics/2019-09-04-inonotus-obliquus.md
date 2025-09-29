@@ -1,11 +1,11 @@
-:blogpost: true
-:date: 09/04/2019
-:category: genomics
-:tags: transcriptomics
-:nocomments:
+---
+blogpost: true
+date: 09/04/2019
+category: genomics
+tags: transcriptomics
+---
 
-Chaga transcriptomics
-=====================
+# Chaga transcriptomics
 
 **Title:**
 RNA-Seq de Novo Assembly and Differential Transcriptome Analysis of Chaga (*Inonotus obliquus*) Cultured with Different Betulin Sources and the Regulation of Genes Involved in Terpenoid Biosynthesis

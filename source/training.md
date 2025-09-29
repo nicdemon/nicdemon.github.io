@@ -1,6 +1,7 @@
-:sd_hide_title:
-Training
-=======================
+---
+title: Training
+---
+# Training
 
 Training page
 
