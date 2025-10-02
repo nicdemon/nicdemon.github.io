@@ -1,15 +1,61 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: b942e74d-a490-4246-8b4a-470e3c3cf494
-  # title:
+  title: "Portfolio"
+  authors:
+    - name: Nicolas de Montigny
+      id: Nicolas
+      orcid: 0000-0002-3708-4055
+      github: nicdemon
+      website: https://nicdemon.github.io/
+      linkedin: https://linkedin.com/in/nicolas-de-montigny-8755101b0/
+      # affiliations:
+      #   - name: Héma-Québec
+      #     url: https://www.hemaquebec.ca/
   # description:
   # keywords: []
-  # authors: []
-  github: https://github.com/nicdemon/nicdemon.github.io
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  github: https://github.com/nicdemon
+  toc:
+    - file: index.md
+    - file: genomics.md
+      children:
+      - pattern: "posts/genomics/*.md"
+    - file: interfaces.md
+    - file: training.md
+    - file: cv-info.md
+  exclude:
+    - README.md
+    - posts/cv-component-template.md
+    - posts/training-pdf-template.md
+    - posts/training-online-template.md
+    - posts/genomics-interface-template.md
+  plugins:
+    - type: executable
+      path: src/blogpost.py
+    
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    folders: true
+    hide_toc: true
+    hide_outline: true
+    logo_text: Nicolas de Montingy
+    analytics_google: G-GR9828KWWV # Measurement ID or Tracking ID
+    favicon: img/favicon.png
+    style: _static/custom.css
+  domains:
+    - nicdemon.github.io
+  # actions:
+  #   - title: Action button
+  #     url: Action link
+  nav:
+    - title: About
+      url: /index
+    - title: Genomics
+      url: /genomics
+    - title: Interfaces
+      url: /interfaces
+    - title: Training
+      url: /training
+    - title: Curriculum Vitae
+      url: /cv-info

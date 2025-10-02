@@ -169,4 +169,4 @@ src/Caribou.egg-info/
 
 *:Zone.Identifier
 # MyST build outputs
-_build
+_build/

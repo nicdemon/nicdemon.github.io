@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set -e
-
-echo "Building the site..."
-
-sphinx-build -M html source build

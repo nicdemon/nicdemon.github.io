@@ -5,14 +5,18 @@
 | Key | Value |
 |-----|-------|
 | Version | 2.0 |
-| Framework | Python Sphinx |
-| Theme | PyData 0.16.1 |
+| Framework | Myst Markdown |
+| Theme | Book Theme |
 | Deployment | Github pages |
 | URL | [https://nicdemon.github.io/](https://nicdemon.github.io/) |
+| Design inspiration | [Dr. Chris Holdgraf's website](https://chrisholdgraf.com/) ([github](https://github.com/choldgraf/choldgraf.github.io/tree/main)) |
 
-## Scripts
-`scripts/setup`: local steps for installation
-
-`scripts/build`: build the website
-
-`scripts/build`: monitor and rebuild website on change
+## Build the docs
+1. Install  `nox`
+```
+pip install nox
+```
+2. Run `tox`
+```
+nox -s start
+```
