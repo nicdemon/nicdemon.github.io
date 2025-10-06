@@ -49,7 +49,7 @@ def get_posts(category, tag):
         except:
             print(f"Skipping file with error: {file}", file=sys.stderr)
             continue
-        
+
         # Load YAML metadata
         meta = safe_load(meta)
         if meta['tag'] == tag:
@@ -60,13 +60,16 @@ def get_posts(category, tag):
                     if line.strip().startswith("#"):
                         meta["title"] = line.replace("#", "").strip()
                         break
+            if "suvtitle" not in meta:
+                lines = text.splitlines()
+                for line in lines:
+                    if line.strip().startswith("##"):
+                        meta["subtitle"] = line.replace("##", "").strip()
+                        break
 
             # Summarize content
             skip_lines = ["#", "--", "%", "++"]
-            content = "\n".join(i for i in content.splitlines() if not any(i.startswith(char) for char in skip_lines))
-            words = " ".join(content.split(" ")[:N_WORDS])
             meta["author"] = "Nicolas de Montigny"
-            meta["content"] = meta.get("description", words)
             posts.append(meta)
 
     # Define posts dict
@@ -92,7 +95,7 @@ def get_children_posts(posts):
                 },
                 {
                     "type": "paragraph",
-                    "children": [u.text(row['Summary'])] # [u.text(row['content'])]
+                    "children": [u.text(row['subtitle'])] # [u.text(row['content'])]
                 },
                 {
                     "type": "footer",
