@@ -60,7 +60,7 @@ def get_posts(category, tag):
                     if line.strip().startswith("#"):
                         meta["title"] = line.replace("#", "").strip()
                         break
-            if "suvtitle" not in meta:
+            if "subtitle" not in meta:
                 lines = text.splitlines()
                 for line in lines:
                     if line.strip().startswith("##"):
@@ -116,7 +116,6 @@ def run_directive(name, data):
     """
     assert name == "bloglist"
 
-    # bloglist = {}
     opt = data["node"].get("options",{})
     category = opt.get("category", DEFAULTS["category"])
     tag = opt.get("tag", DEFAULTS["tag"])
