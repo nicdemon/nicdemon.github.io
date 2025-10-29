@@ -17,21 +17,27 @@ project:
   github: https://github.com/nicdemon
   toc:
     - file: index.md
-    - file: genomics.md
-      children:
-      - pattern: "posts/genomics/*.md"
-    - file: interfaces.md
+    - file: projects.md
+      # children:
+      #   - pattern: posts/projects/*/*.md
     - file: training.md
+      # children:
+      #   - pattern: posts/training/*/*.md
     - file: cv-info.md
+      # children:
+      #   - pattern: posts/cv/*/*.md
   exclude:
     - README.md
     - posts/cv-component-template.md
-    - posts/training-pdf-template.md
-    - posts/training-online-template.md
-    - posts/genomics-interface-template.md
+    - posts/training-template.md
+    - posts/projects-template.md
   plugins:
     - type: executable
-      path: src/blogpost.py
+      path: src/projects.py
+    - type: executable
+      path: src/training.py
+    # - type: executable
+    #   path: src/cv.py
     
 site:
   template: book-theme
@@ -39,7 +45,7 @@ site:
     folders: true
     hide_toc: true
     hide_outline: true
-    logo_text: Nicolas de Montingy
+    logo_text: Nicolas de Montigny
     analytics_google: G-GR9828KWWV # Measurement ID or Tracking ID
     favicon: img/favicon.png
     style: _static/custom.css
@@ -51,10 +57,8 @@ site:
   nav:
     - title: About
       url: /index
-    - title: Genomics
-      url: /genomics
-    - title: Interfaces
-      url: /interfaces
+    - title: Projects
+      url: /projects
     - title: Training
       url: /training
     - title: Curriculum Vitae

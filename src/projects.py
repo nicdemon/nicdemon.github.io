@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import os
 import sys
 import json
@@ -11,63 +12,61 @@ from yaml import safe_load
 POSTS = []
 N_WORDS = 50
 DEFAULTS = {
-    "category": "",
-    "tag": ""
+    "category": ""
 }
 
 parentDir = Path(__file__).parent.parent
 
 PLUGIN_SPEC = {
-    "name": "Blog posts list",
+    "name": "Projects list",
     "directives": [{
-        "name": "bloglist",
-        "doc": "A list of blog posts",
+        "name": "projectsList",
+        "doc": "A list of projects",
         "arg": {},
         "options": {
             "category": {
                 "type": "string",
-                "doc": "The category of posts to include"
-            },
-            "tag": {
-                "type": "string",
-                "doc": "The tag of posts to include"
+                "doc": "The category of projects to include"
             }
         }
     }]
 }
 
-def get_posts(category, tag):
+def get_posts(category):
     """
-    Fetch posts by category and tag in the YAML header
+    Fetch posts by category
     """
     # Aggregate posts
     posts = []
-    for file in parentDir.rglob(f'posts/{category}/*.md'):
+    for file in parentDir.rglob(f'posts/projects/{category}/*.md'):
         text = file.read_text()
         try:
             _, meta, content = text.split("---", 2)
         except:
             print(f"Skipping file with error: {file}", file=sys.stderr)
             continue
-        
+
         # Load YAML metadata
         meta = safe_load(meta)
-        if meta['tag'] == tag:
-            meta["path"] = file.relative_to(parentDir).with_suffix("")
-            if "title" not in meta:
-                lines = text.splitlines()
-                for line in lines:
-                    if line.strip().startswith("#"):
-                        meta["title"] = line.replace("#", "").strip()
-                        break
-
-            # Summarize content
-            skip_lines = ["#", "--", "%", "++"]
-            content = "\n".join(i for i in content.splitlines() if not any(i.startswith(char) for char in skip_lines))
-            words = " ".join(content.split(" ")[:N_WORDS])
-            meta["author"] = "Nicolas de Montigny"
-            meta["content"] = meta.get("description", words)
-            posts.append(meta)
+        meta["path"] = file.relative_to(parentDir).with_suffix("")
+        if "title" not in meta:
+            lines = text.splitlines()
+            for line in lines:
+                if line.strip().startswith("#"):
+                    meta["title"] = line.replace("#", "").strip()
+                    break
+                
+        if "subtitle" not in meta:
+            lines = text.splitlines()
+            for line in lines:
+                if line.strip().startswith("##"):
+                    meta["subtitle"] = line.replace("##", "").strip()
+                    break
+            
+        # Summarize content
+        skip_lines = ["#", "--", "%", "++"]
+        meta["author"] = "Nicolas de Montigny"
+        posts.append(meta)
 
     # Define posts dict
     posts = pd.DataFrame(posts)
@@ -78,7 +77,7 @@ def get_posts(category, tag):
 
 def get_children_posts(posts):
     """
-    Fetch posts by tag from a list of posts filtered by category
+    Fetch posts by category
     """
     CHILDREN_POSTS = []
     for x, row in posts.iterrows():
@@ -92,7 +91,7 @@ def get_children_posts(posts):
                 },
                 {
                     "type": "paragraph",
-                    "children": [u.text(row['Summary'])] # [u.text(row['content'])]
+                    "children": [u.text(row['subtitle'])]
                 },
                 {
                     "type": "footer",
@@ -111,13 +110,11 @@ def run_directive(name, data):
     :param name: name of the directive to run
     :param data: data of the directive to run
     """
-    assert name == "bloglist"
+    assert name == "projectsList"
 
-    # bloglist = {}
     opt = data["node"].get("options",{})
     category = opt.get("category", DEFAULTS["category"])
-    tag = opt.get("tag", DEFAULTS["tag"])
-    CHILDREN_POSTS = get_posts(category, tag)
+    CHILDREN_POSTS = get_posts(category)
 
     return CHILDREN_POSTS
 

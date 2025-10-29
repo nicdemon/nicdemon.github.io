@@ -1,7 +1,5 @@
 ---
 date: YYYY-MM-DD
-category: # genomics or interfaces
-tag: tag
 ---
 
 # Short title
@@ -13,7 +11,7 @@ tag: tag
 * 
 :::
 
-:::{figure} ../../img/<image>.png
+:::{figure} img/<image>.png
 :label: <label>
 :alt: <alt text>
 :align: center
@@ -21,19 +19,29 @@ tag: tag
 <Figure caption>
 :::
 
+### 🎯 Project objective
+<Text objective(s)>
+
+### 📋 Project description
 <Text description>
+
+### 🎨 Design & implementation decisions
+<Text decisions>
+
+### 🧾 Key takeaway
+<Text / bulletpoints takeaway>
 
 ::::{grid} 1 1 2 2
 
 :::{card}
 
-### Contribution:
+### 👨‍💻 Contribution:
 * 
 :::
 
 :::{card}
 
-### Tools:
+### 🛠 Tools:
 * 
 :::
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import os
 import sys
 import json
@@ -18,19 +19,19 @@ DEFAULTS = {
 parentDir = Path(__file__).parent.parent
 
 PLUGIN_SPEC = {
-    "name": "Blog posts list",
+    "name": "CV elements list",
     "directives": [{
-        "name": "bloglist",
-        "doc": "A list of blog posts",
+        "name": "cvList",
+        "doc": "A list of CV elements",
         "arg": {},
         "options": {
             "category": {
                 "type": "string",
-                "doc": "The category of posts to include"
+                "doc": "The category of CV elements to include"
             },
             "tag": {
                 "type": "string",
-                "doc": "The tag of posts to include"
+                "doc": "The tag of CV elements to include"
             }
         }
     }]
@@ -49,7 +50,7 @@ def get_posts(category, tag):
         except:
             print(f"Skipping file with error: {file}", file=sys.stderr)
             continue
-        
+
         # Load YAML metadata
         meta = safe_load(meta)
         if meta['tag'] == tag:
@@ -60,13 +61,16 @@ def get_posts(category, tag):
                     if line.strip().startswith("#"):
                         meta["title"] = line.replace("#", "").strip()
                         break
+            if "subtitle" not in meta:
+                lines = text.splitlines()
+                for line in lines:
+                    if line.strip().startswith("##"):
+                        meta["subtitle"] = line.replace("##", "").strip()
+                        break
 
             # Summarize content
             skip_lines = ["#", "--", "%", "++"]
-            content = "\n".join(i for i in content.splitlines() if not any(i.startswith(char) for char in skip_lines))
-            words = " ".join(content.split(" ")[:N_WORDS])
             meta["author"] = "Nicolas de Montigny"
-            meta["content"] = meta.get("description", words)
             posts.append(meta)
 
     # Define posts dict
@@ -92,7 +96,7 @@ def get_children_posts(posts):
                 },
                 {
                     "type": "paragraph",
-                    "children": [u.text(row['Summary'])] # [u.text(row['content'])]
+                    "children": [u.text(row['subtitle'])]
                 },
                 {
                     "type": "footer",
@@ -111,9 +115,8 @@ def run_directive(name, data):
     :param name: name of the directive to run
     :param data: data of the directive to run
     """
-    assert name == "bloglist"
+    assert name == "cvList"
 
-    # bloglist = {}
     opt = data["node"].get("options",{})
     category = opt.get("category", DEFAULTS["category"])
     tag = opt.get("tag", DEFAULTS["tag"])

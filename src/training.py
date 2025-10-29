@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import os
 import sys
 import json
@@ -11,38 +12,33 @@ from yaml import safe_load
 POSTS = []
 N_WORDS = 50
 DEFAULTS = {
-    "category": "",
-    "tag": ""
+    "category": ""
 }
 
 parentDir = Path(__file__).parent.parent
 
 PLUGIN_SPEC = {
-    "name": "Blog posts list",
+    "name": "Trainings list",
     "directives": [{
-        "name": "bloglist",
-        "doc": "A list of blog posts",
+        "name": "trainingsList",
+        "doc": "A list of trainings",
         "arg": {},
         "options": {
             "category": {
                 "type": "string",
-                "doc": "The category of posts to include"
-            },
-            "tag": {
-                "type": "string",
-                "doc": "The tag of posts to include"
+                "doc": "The category of trainings to include"
             }
         }
     }]
 }
 
-def get_posts(category, tag):
+def get_posts(category):
     """
-    Fetch posts by category and tag in the YAML header
+    Fetch posts by category
     """
     # Aggregate posts
     posts = []
-    for file in parentDir.rglob(f'posts/{category}/*.md'):
+    for file in parentDir.rglob(f'posts/training/{category}/*.md'):
         text = file.read_text()
         try:
             _, meta, content = text.split("---", 2)
@@ -52,25 +48,12 @@ def get_posts(category, tag):
 
         # Load YAML metadata
         meta = safe_load(meta)
-        if meta['tag'] == tag:
-            meta["path"] = file.relative_to(parentDir).with_suffix("")
-            if "title" not in meta:
-                lines = text.splitlines()
-                for line in lines:
-                    if line.strip().startswith("#"):
-                        meta["title"] = line.replace("#", "").strip()
-                        break
-            if "subtitle" not in meta:
-                lines = text.splitlines()
-                for line in lines:
-                    if line.strip().startswith("##"):
-                        meta["subtitle"] = line.replace("##", "").strip()
-                        break
-
-            # Summarize content
-            skip_lines = ["#", "--", "%", "++"]
-            meta["author"] = "Nicolas de Montigny"
-            posts.append(meta)
+        meta["path"] = file.relative_to(parentDir).with_suffix("")
+        
+        # Summarize content
+        skip_lines = ["#", "--", "%", "++"]
+        meta["author"] = "Nicolas de Montigny"
+        posts.append(meta)
 
     # Define posts dict
     posts = pd.DataFrame(posts)
@@ -81,13 +64,14 @@ def get_posts(category, tag):
 
 def get_children_posts(posts):
     """
-    Fetch posts by tag from a list of posts filtered by category
+    Fetch posts by category
     """
     CHILDREN_POSTS = []
     for x, row in posts.iterrows():
+    # TODO: Different cards depending on embed / image + link
         CHILDREN_POSTS.append({
             "type": "card",
-            "url": f"/{row['path'].with_suffix("")}",
+            "url": row["link"],
             "children": [
                 {
                     "type": "cardTitle",
@@ -95,7 +79,7 @@ def get_children_posts(posts):
                 },
                 {
                     "type": "paragraph",
-                    "children": [u.text(row['subtitle'])] # [u.text(row['content'])]
+                    "children": [u.image(row["file"])]
                 },
                 {
                     "type": "footer",
@@ -114,12 +98,11 @@ def run_directive(name, data):
     :param name: name of the directive to run
     :param data: data of the directive to run
     """
-    assert name == "bloglist"
+    assert name == "trainingsList"
 
     opt = data["node"].get("options",{})
     category = opt.get("category", DEFAULTS["category"])
-    tag = opt.get("tag", DEFAULTS["tag"])
-    CHILDREN_POSTS = get_posts(category, tag)
+    CHILDREN_POSTS = get_posts(category)
 
     return CHILDREN_POSTS
 

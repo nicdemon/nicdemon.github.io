@@ -45,7 +45,7 @@ Being both a computer scientist and a biologist enables me to understand both wo
 * Data Science
 * Machine Learning
 * Cloud Computing
-* Tool development for biological data analysis
+* Tools design & development
 
 ::::
 

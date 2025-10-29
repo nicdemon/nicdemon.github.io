@@ -3,8 +3,21 @@ title: Curriculum vitae
 ---
 # Curriculum vitae
 
-CV page
+:::::{tab-set}
 
-:::(postlist)
-   :category: cv
-:::
+::::{tab-item} Employment
+::::
+
+::::{tab-item} Education
+::::
+
+::::{tab-item} Publications
+::::
+
+::::{tab-item} Skills
+::::
+
+::::{tab-item} Miscellaneous
+::::
+
+:::::
