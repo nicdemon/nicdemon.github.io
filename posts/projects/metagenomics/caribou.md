@@ -12,7 +12,7 @@ date: 2024-01-14
 * Pr Abdoulaye Baniré Diallo (co-director)
 :::
 
-:::{figure} img/caribou-algo.png
+:::{figure} ../../../img/projects/caribou-algo.png
 :label: caribou-workflow
 :alt: Workflow view of the Caribou pipeline
 :align: center

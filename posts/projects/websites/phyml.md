@@ -13,7 +13,7 @@ date: 2020-05-05
 * Wanlin Li
 :::
 
-:::{figure} img/phyml-web.png
+:::{figure} ../../../img/projects/phyml-web.png
 :label: phyml
 :alt: Phyml web app landing
 :align: center

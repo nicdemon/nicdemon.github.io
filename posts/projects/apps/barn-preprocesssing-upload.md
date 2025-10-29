@@ -11,7 +11,7 @@ date: 2024-08-04
 * François Gonothi Toure
 :::
 
-:::{figure} img/flet-UI.png
+:::{figure} ../../../img/projects/flet-UI.png
 :label: preprocessing
 :alt: A screenshot of the preprocessing and upload app
 :align: center

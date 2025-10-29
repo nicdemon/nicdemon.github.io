@@ -5,35 +5,39 @@ title: Training
 
 :::::{tab-set}
 ::::{tab-item} Kaggle
-<!-- :::{trainingsList}
-:category: training
-:tag: Kaggle
-::: -->
+:::{trainingsList}
+:category: kaggle
+:::
 ::::
 
 ::::{tab-item} GCP
-<!-- :::{trainingsList}
-:category: training
-:tag: GCP
-::: -->
+:::{trainingsList}
+:category: GCP
+:::
 ::::
 
 ::::{tab-item} Microsoft Learn
-<!-- :::{trainingsList}
-:category: training
-:tag: MSLearn
-::: -->
+:::{trainingsList}
+:category: MSLearn
+:::
 ::::
 
 <!-- ::::{tab-item} AWS
+:::{trainingsList}
+:category: AWS
+:::
 :::: -->
 
 <!-- ::::{tab-item} Coursera
+:::{trainingsList}
+:category: Coursera
+:::
 :::: -->
 
-::::{tab-item} Digital Research Alliance of Canada
+::::{tab-item} Other
+
 :::{trainingsList}
-:category: CCDB
+:category: other
 :::
 ::::
 :::::

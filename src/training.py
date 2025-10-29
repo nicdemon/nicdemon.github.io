@@ -38,16 +38,14 @@ def get_posts(category):
     """
     # Aggregate posts
     posts = []
-    for file in parentDir.rglob(f'posts/training/{category}/*.md'):
-        text = file.read_text()
+    for file in parentDir.rglob(f'posts/training/{category}/*.yml'):
         try:
-            _, meta, content = text.split("---", 2)
+            with open(file,'r') as f:
+                meta = safe_load(f)
         except:
             print(f"Skipping file with error: {file}", file=sys.stderr)
             continue
 
-        # Load YAML metadata
-        meta = safe_load(meta)
         meta["path"] = file.relative_to(parentDir).with_suffix("")
         
         # Summarize content
@@ -68,9 +66,8 @@ def get_children_posts(posts):
     """
     CHILDREN_POSTS = []
     for x, row in posts.iterrows():
-    # TODO: Different cards depending on embed / image + link
         CHILDREN_POSTS.append({
-            "type": "card",
+            "type": "list",
             "url": row["link"],
             "children": [
                 {

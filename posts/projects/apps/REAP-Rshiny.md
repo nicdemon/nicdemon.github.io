@@ -11,7 +11,7 @@ date: 2018-02-18
 * Dre Johanne Poudrier
 :::
 
-:::{figure} img/REAP-demo-web.png
+:::{figure} ../../../img/projects/REAP-demo-web.png
 :label: reap-demo
 :alt: The landing screen of the REAP demo Shiny app 
 :align: center

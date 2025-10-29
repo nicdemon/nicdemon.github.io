@@ -6,7 +6,7 @@ date: 2024-10-31
 
 ## Original implementation of my portfolio website
 
-:::{figure} img/portfolio-v1.png
+:::{figure} ../../../img/projects/portfolio-v1.png
 :label: portfolioV1
 :alt: A screenshot of the first version
 :align: center

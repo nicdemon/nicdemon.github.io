@@ -6,7 +6,7 @@ date: 2025-07-14
 
 ## PowerApp for team process analysis
 
-:::{figure} img/process-analysis.png
+:::{figure} ../../../img/projects/process-analysis.png
 :label: processAnalysis
 :alt: A screenshot of the process analysis web app landing page
 :align: center

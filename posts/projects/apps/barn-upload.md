@@ -11,7 +11,7 @@ date: 2024-06-05
 * 
 :::
 
-:::{figure} img/narvalUpload-UI.png
+:::{figure} ../../../img/projects/narvalUpload-UI.png
 :label: narvalUpload
 :alt: A screenshot of the uploader interface
 :align: center

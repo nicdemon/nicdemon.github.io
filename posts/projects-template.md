@@ -11,7 +11,8 @@ date: YYYY-MM-DD
 * 
 :::
 
-:::{figure} img/<image>.png
+<!-- Figure path must be relative to be recognized -->
+:::{figure} ../../img/<image>.png
 :label: <label>
 :alt: <alt text>
 :align: center

@@ -29,7 +29,7 @@ Being both a computer scientist and a biologist enables me to understand both wo
 
 ::::{card}
 
-![Bioinformatics icons created by Freepik - Flaticon](/img/bioinformatics.png "Bioinformatics") **Bioinformatics**
+![Bioinformatics icons created by Freepik - Flaticon](/img/icons/bioinformatics.png "Bioinformatics") **Bioinformatics**
 
 * Sustainable development, coding and machine learning practices
 * Environmental impact of human practices
@@ -40,7 +40,7 @@ Being both a computer scientist and a biologist enables me to understand both wo
 
 ::::{card}
 
-![Computer icons created by vectorsmarket15 - Flaticon](/img/compsci.png "ComputerScience") **Computer sciences**
+![Computer icons created by vectorsmarket15 - Flaticon](/img/icons/compsci.png "ComputerScience") **Computer sciences**
 
 * Data Science
 * Machine Learning
@@ -51,7 +51,7 @@ Being both a computer scientist and a biologist enables me to understand both wo
 
 ::::{card}
 
-![Biology icons created by Eucalyp - Flaticon](/img/biology.png "Biology") **Biological sciences**
+![Biology icons created by Eucalyp - Flaticon](/img/icons/biology.png "Biology") **Biological sciences**
 
 * Environment & Climate changes
 * Human genomics

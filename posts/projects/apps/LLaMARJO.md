@@ -11,7 +11,7 @@ date: 2024-05-06
 * Momar Aly Dom Fall
 :::
 
-:::{figure} img/LLaMARJO-UI.png
+:::{figure} ../../../img/projects/LLaMARJO-UI.png
 :label: llamarjo
 :alt: An example screenshot of the LLaMARJO webapp
 :align: center
