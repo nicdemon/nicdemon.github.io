@@ -1,0 +1,6 @@
+mystmd
+jupyterlab-myst
+pandas
+pyyaml
+rich
+ipython

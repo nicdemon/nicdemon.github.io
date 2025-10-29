@@ -1,0 +1,57 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: "Portfolio"
+  authors:
+    - name: Nicolas de Montigny
+      id: Nicolas
+      orcid: 0000-0002-3708-4055
+      github: nicdemon
+      website: https://nicdemon.github.io/
+      linkedin: https://linkedin.com/in/nicolas-de-montigny-8755101b0/
+      # affiliations:
+      #   - name: Héma-Québec
+      #     url: https://www.hemaquebec.ca/
+  # description:
+  # keywords: []
+  github: https://github.com/nicdemon
+  toc:
+    - file: index.md
+    - file: projects.md
+      children:
+        - pattern: posts/projects/*/*.md
+          hidden: true
+    - file: training.md
+  exclude:
+    - README.md
+    - posts/cv-component-template.md
+    - posts/training-template.md
+    - posts/projects-template.md
+  plugins:
+    - type: executable
+      path: src/projects.py
+    - type: executable
+      path: src/training.py
+    
+site:
+  template: book-theme
+  options:
+    folders: true
+    hide_toc: true
+    hide_outline: true
+    logo_text: Nicolas de Montigny
+    analytics_google: G-GR9828KWWV # Measurement ID or Tracking ID
+    favicon: img/favicon.png
+    style: _static/custom.css
+  domains:
+    - nicdemon.github.io
+  # actions:
+  #   - title: Action button
+  #     url: Action link
+  nav:
+    - title: About
+      url: /index
+    - title: Projects
+      url: /projects
+    - title: Training
+      url: /training
