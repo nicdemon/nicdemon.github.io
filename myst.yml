@@ -7,7 +7,8 @@ project:
       id: Nicolas
       orcid: 0000-0002-3708-4055
       github: nicdemon
-      website: https://nicdemon.github.io/
+      website: https://nicdemon.curve.space/
+      # website: https://nicdemon.github.io/
       linkedin: https://linkedin.com/in/nicolas-de-montigny-8755101b0/
   github: https://github.com/nicdemon
   toc:
@@ -39,7 +40,8 @@ site:
     favicon: img/favicon.png
     style: _static/custom.css
   domains:
-    - nicdemon.github.io
+      - nicdemon.curve.space
+    # - nicdemon.github.io
   # actions:
   #   - title: Action button
   #     url: Action link
