@@ -7,10 +7,10 @@ on:
     # Runs on pushes targeting the default branch
     branches: 
     - main
-env:
+# env:
   # `BASE_URL` determines the website is served from, including CSS & JS assets
   # You may need to change this to `BASE_URL: ''`
-  BASE_URL: ${{ github.event.repository.name }}
+  # BASE_URL: ${{ github.event.repository.name }}
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -18,7 +18,7 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -42,6 +42,11 @@ jobs:
     - name: Build the site
       run: |
         myst build --html
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
 
     # If we've pushed to main, push the book's HTML to github-pages
     - name: Deploy
