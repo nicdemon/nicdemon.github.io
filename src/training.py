@@ -67,7 +67,7 @@ def get_children_posts(posts):
     CHILDREN_POSTS = []
     for x, row in posts.iterrows():
         CHILDREN_POSTS.append({
-            "type": "list",
+            "type": "card",
             "url": row["link"],
             "children": [
                 {

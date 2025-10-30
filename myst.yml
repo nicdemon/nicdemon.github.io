@@ -1,6 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
+  id: d27d81e2-2cb0-411d-9da2-37978f8723d6
   title: "Portfolio"
   authors:
     - name: Nicolas de Montigny
