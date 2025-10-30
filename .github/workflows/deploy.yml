@@ -27,7 +27,6 @@ jobs:
     - name: Install dependencies
       run: |
         uv pip install --system -r requirements.txt
-        uv pip install --system -r execute-requirements.txt
 
     # Build the book
     - name: Build the site

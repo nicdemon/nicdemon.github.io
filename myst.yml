@@ -44,8 +44,8 @@ site:
   #   - title: Action button
   #     url: Action link
   nav:
-    - title: About
-      url: /
+    - title: About Me
+      url: /index
     - title: Projects
       url: /projects
     - title: Training
