@@ -46,3 +46,12 @@
 #       - name: Deploy to GitHub Pages
 #         id: deployment
 #         uses: actions/deploy-pages@v4
+
+
+#     # If we've pushed to main, push the book's HTML to github-pages
+#     # - name: Deploy
+#     #   uses: peaceiris/actions-gh-pages@v4
+#     #   if: github.ref == 'refs/heads/main'
+#     #   with:
+#     #     github_token: ${{ secrets.GITHUB_TOKEN }}
+#     #     publish_dir: ./_build/html
