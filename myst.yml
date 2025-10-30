@@ -11,6 +11,7 @@ project:
       linkedin: https://linkedin.com/in/nicolas-de-montigny-8755101b0/
   github: https://github.com/nicdemon
   toc:
+    - file: index.md
     - file: projects.md
       children:
         - pattern: posts/projects/*/*.md
@@ -43,6 +44,8 @@ site:
   #   - title: Action button
   #     url: Action link
   nav:
+    - title: About
+      url: /
     - title: Projects
       url: /projects
     - title: Training
