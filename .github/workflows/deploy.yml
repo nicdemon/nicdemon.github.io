@@ -7,7 +7,6 @@ on:
     # Runs on pushes targeting the default branch
     branches: 
     - main
-  workflow_dispatch:
 
 jobs:
   build:
