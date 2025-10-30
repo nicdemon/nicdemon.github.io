@@ -4,10 +4,12 @@ name: Curvenote Deploy
 on:
   push:
     # Runs on pushes targeting the default branch
-    branches: [main]
+    branches: 
+      - main
 permissions:
   # Sets permissions of the GITHUB_TOKEN to allow read of private repos
   contents: read
+  pull-requests: write
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -21,3 +23,4 @@ jobs:
         uses: curvenote/action-myst-publish@v1
         env:
           CURVENOTE_TOKEN: ${{ secrets.CURVENOTE_TOKEN }}
+          GITHUB: ${{ secrets.GITHUB_TOKEN }}
