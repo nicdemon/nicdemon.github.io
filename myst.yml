@@ -8,8 +8,7 @@ project:
       id: Nicolas
       orcid: 0000-0002-3708-4055
       github: nicdemon
-      website: https://nicdemon.curve.space/
-      # website: https://nicdemon.github.io/
+      website: https://nicdemon.github.io/
       linkedin: https://linkedin.com/in/nicolas-de-montigny-8755101b0/
   github: https://github.com/nicdemon
   toc:
@@ -19,11 +18,13 @@ project:
         - pattern: posts/projects/*/*.md
           hidden: true
     - file: training.md
+    # - file: demo.md
   exclude:
     - README.md
     - posts/cv-component-template.md
     - posts/training-template.md
     - posts/projects-template.md
+    - demo.md # Remove line to use the demo section
   plugins:
     - type: executable
       path: src/projects.py
@@ -41,15 +42,14 @@ site:
     favicon: img/favicon.png
     style: _static/custom.css
   domains:
-      - nicdemon.curve.space
-    # - nicdemon.github.io
+    - nicdemon.github.io
   # actions:
   #   - title: Action button
   #     url: Action link
   nav:
-    - title: About Me
-      url: /index
     - title: Projects
       url: /projects
     - title: Training
       url: /training
+    # - title: Live demos
+    #   url: /demo
