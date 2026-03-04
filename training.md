@@ -4,6 +4,12 @@ title: Training
 # Training
 
 :::::{tab-set}
+::::{tab-item} Project Management
+:::{trainingsList}
+:category: project-management
+:::
+::::
+
 ::::{tab-item} Kaggle
 :::{trainingsList}
 :category: kaggle
