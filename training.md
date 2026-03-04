@@ -16,7 +16,7 @@ title: Training
 :::
 ::::
 
-::::{tab-item} GCP
+::::{tab-item} Google Cloud
 :::{trainingsList}
 :category: GCP
 :::

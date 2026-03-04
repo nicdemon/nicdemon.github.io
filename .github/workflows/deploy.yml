@@ -24,7 +24,7 @@ jobs:
     # Setup Node.js + dependencies
     - uses: actions/setup-node@v4
       with:
-        node-version: '18.19.1'
+        node-version: '20.0.0'
 
     - name: Install MyST
       run: npm install -g mystmd
