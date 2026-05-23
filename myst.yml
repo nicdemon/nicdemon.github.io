@@ -51,5 +51,6 @@ site:
       url: /projects
     - title: Training
       url: /training
+    # Uncomment next lines to enable the demos page
     # - title: Live demos
     #   url: /demo
